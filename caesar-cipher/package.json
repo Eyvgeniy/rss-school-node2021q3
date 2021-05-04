@@ -1,0 +1,35 @@
+{
+  "name": "caesar-cipher",
+  "version": "1.0.0",
+  "description": "Caesar cipher application",
+  "main": "my_caesar_cli.js",
+  "scripts": {
+    "lint": "npx eslint .",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "type": "module",
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
+  },
+  "keywords": [
+    "cipher",
+    "node",
+    "cli",
+    "app"
+  ],
+  "author": "Eyvgeniy",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^26.6.3"
+  }
+}
