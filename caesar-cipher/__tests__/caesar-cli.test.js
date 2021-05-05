@@ -1,6 +1,6 @@
 import { promises as fsp } from 'fs';
 import path from 'path';
-import caesarCipher, { shiftChar } from '../my_caesar_cli';
+import caesarCipher, { shiftChar } from '../src/my_caesar_cli';
 
 const inputFile = 'input.txt';
 const outputFile = 'output.txt';
@@ -34,4 +34,11 @@ test('test shift symbols', () => {
 
 test('test shift text', () => {
   expect(caesarCipher(inputText, 1)).toMatch(outputText);
+});
+
+test('test negative shift', () => {
+  expect(caesarCipher('A', -1)).toMatch('Z');
+  expect(caesarCipher('A', -27)).toMatch('Z');
+  expect(caesarCipher('B', -1)).toMatch('A');
+  expect(caesarCipher('B', -27)).toMatch('A');
 });
