@@ -1,13 +1,14 @@
 import { promises as fsp } from 'fs';
 import path from 'path';
-import caesarCipher, { shiftChar } from '../src/my_caesar_cli';
+import caesarCipher, { shiftChar } from '../src/caesar_cipher';
 
 const inputFile = 'input.txt';
 const outputFile = 'output.txt';
 const inputPath = path.resolve('__fixtures__', inputFile);
 const outputPath = path.resolve('__fixtures__', outputFile);
 
-let inputText, outputText;
+let inputText;
+let outputText;
 
 beforeAll(async () => {
   inputText = await fsp.readFile(inputPath, 'utf-8');
