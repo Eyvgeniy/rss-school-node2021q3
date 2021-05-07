@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Caesar cipher application",
   "main": "my_caesar_cli.js",
+  "bin": {"caesar-cli": "src/bin/caesar-cipher.js"},
   "scripts": {
     "lint": "npx eslint .",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --color"
