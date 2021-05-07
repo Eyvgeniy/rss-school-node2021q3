@@ -17,7 +17,7 @@ export default ({ shift, action, input, output }) => {
   if (output === undefined) {
     outputStream = process.stdout;
   } else {
-    outputStream = fs.createWriteStream(output);
+    outputStream = fs.createWriteStream(output, { flags: 'a' });
   }
 
   if (action === 'decode') shift = -shift;
