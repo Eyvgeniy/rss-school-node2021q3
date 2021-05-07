@@ -1,6 +1,6 @@
 import { promises as fsp } from 'fs';
 import path from 'path';
-import caesarCipher, { shiftChar } from '../src/caesar_cipher';
+import caesarCipher, { shiftChar } from '../src/caesarCipher';
 
 const inputFile = 'input.txt';
 const outputFile = 'output.txt';
