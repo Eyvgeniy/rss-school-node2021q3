@@ -1,6 +1,16 @@
 import fs from 'fs';
 
-const validate = (shift, action, input) => {
+const checkFileAccess = (path, errors) => {
+  if (path !== undefined) {
+    try {
+      fs.accessSync(path);
+    } catch {
+      errors.push(`Error: No access to ${path}`);
+    }
+  }
+};
+
+const validate = (shift, action, input, output) => {
   const errors = [];
   if (shift === undefined) {
     errors.push("Error: required option '-s, --shift <shift>' not specified");
@@ -15,13 +25,8 @@ const validate = (shift, action, input) => {
     errors.push("Error: action option must be 'encode' or 'decode'");
   }
 
-  if (input !== undefined) {
-    try {
-      fs.accessSync(input);
-    } catch {
-      errors.push(`Error: No access to ${input}`);
-    }
-  }
+  checkFileAccess(input, errors);
+  checkFileAccess(output, errors);
 
   if (errors.length > 0) {
     process.stderr.write(errors[0]);

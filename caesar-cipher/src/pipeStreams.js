@@ -4,7 +4,7 @@ import pipeline from './pipeline.js';
 import validate from './validate.js';
 
 export default ({ shift, action, input, output }) => {
-  validate(shift, action, input);
+  validate(shift, action, input, output);
 
   let inputStream;
   let outputStream;
