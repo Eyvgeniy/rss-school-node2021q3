@@ -19,7 +19,7 @@ const validate = (shift, action, input) => {
     try {
       fs.accessSync(input);
     } catch {
-      errors.push(`Error: No acces to ${input}`);
+      errors.push(`Error: No access to ${input}`);
     }
   }
 
