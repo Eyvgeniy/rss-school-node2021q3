@@ -1,9 +1,11 @@
-/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-param-reassign */
 import fs from 'fs';
 import pipeline from './pipeline.js';
 import validate from './validate.js';
 
-export default ({ shift, action, input, output }) => {
+export default ({
+  shift, action, input, output,
+}) => {
   validate(shift, action, input, output);
 
   let inputStream;

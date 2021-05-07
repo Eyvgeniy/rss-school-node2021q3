@@ -46,8 +46,7 @@ export const shiftChar = (char, shift) => {
   return String.fromCharCode(charIdx + shiftRemainder);
 };
 
-export default (inputText, shift = 1) =>
-  inputText
-    .split('')
-    .map((char) => shiftChar(char, shift))
-    .join('');
+export default (inputText, shift = 1) => inputText
+  .split('')
+  .map((char) => shiftChar(char, shift))
+  .join('');
