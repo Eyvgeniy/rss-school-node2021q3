@@ -20,14 +20,20 @@ $ node caesar-cipher-cli -s 7 -a encode -i input.txt -o output.txt
 ### 1. Install dependencies:
 
 ```
+./caesar-cipher
 $ npm install
 ```
 
-### 2. Install tool:
+### 2. Work with tool
 
 ```
-$ npm publish --dry-run
-$ npm link
+./caesar-cipher/src/bin/
+$ node caesar-cipher-cli [options]
 ```
 
 ---
+### 3. Tests
+
+```
+./caesar-cipher
+$ npm run test
