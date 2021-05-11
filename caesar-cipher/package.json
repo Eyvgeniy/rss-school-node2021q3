@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Caesar cipher application",
   "main": "my_caesar_cli.js",
+  "bin": {"caesar-cli": "src/bin/caesar-cipher.js"},
   "scripts": {
     "lint": "npx eslint .",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest --color"
   },
   "engines": {
     "node": ">=14"
@@ -23,7 +24,9 @@
   ],
   "author": "Eyvgeniy",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "commander": "^7.2.0"
+  },
   "devDependencies": {
     "cross-env": "^7.0.3",
     "eslint": "^7.25.0",
