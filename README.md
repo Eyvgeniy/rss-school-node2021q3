@@ -4,4 +4,4 @@
 
 Caeser cipher
 
-<a href="https://www.javascript.com"><code><img alt="JavaScript" height="40px" src="https://cdn.svgporn.com/logos/javascript.svg" /></code></a>
+<a href="https://www.javascript.com"><img alt="JavaScript" height="40px" src="https://cdn.svgporn.com/logos/javascript.svg" /></a>
